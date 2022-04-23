@@ -16,7 +16,7 @@ export default function Header() {
       id:length
     })
    
-    const uniqueSkills =['Web Design','Front-end','Beack-end']
+    const filterSkills =['Web Design','Front-end','Beack-end']
 
     const handleClickOpen = () => {
       setOpen(true);
@@ -76,8 +76,8 @@ export default function Header() {
             name="title"
           />
           <br/>
-          <TextField name="skills" select  defaultValue={uniqueSkills}  variant="standard" sx={{width:"200px" , marginTop:"1rem"}} label="skills" onChange={handleChange} >
-                {uniqueSkills.map((option) => (
+          <TextField name="skills" select  defaultValue={filterSkills}  variant="standard" sx={{width:"200px" , marginTop:"1rem"}} label="skills" onChange={handleChange} >
+                {filterSkills.map((option) => (
                     <MenuItem key={option.id} value={option} >
                         {option}
                     </MenuItem>
